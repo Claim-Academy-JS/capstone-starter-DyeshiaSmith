@@ -1,47 +1,42 @@
 import React from "react";
 
 export default class Login extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loggedIn: false,
-      name: "",
-      username: "",
-      password: "",
-      error: false,
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleChange(e) {
-    this.ListeningStateChangedEvent({ [e.target.title]: e.target.value });
-  }
+  // Using ES class fields
+  state = {
+    loggedIn: false,
+    username: "",
+    password: "",
+    error: false,
+  };
+
+  handleChange = (e) => {
+    this.setState({ [e.target.dataset.input]: e.target.value });
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { username, password } = this.state;
-    if (username === "test" && password === "test") {
-      this.setState({ loggedin: true });
-    } else {
-      this.setState({ err: "Error please check username or password" });
-    }
   };
 
   render() {
     return (
       <div className="main">
         <form className="login-form">
+          {/* TODO: Refactor this to use just one Input component */}
           <input
             type="text"
             title="username"
             placeholder="username"
+            value={this.state.username}
             onChange={this.handleChange}
+            data-input="username"
           />
           <input
             type="password"
             title="password"
             placeholder="password"
+            value={this.state.password}
             onChange={this.handleChange}
+            data-input="password"
           />
           <button type="submit" className="button" onClick={this.handleSubmit}>
             Submit
