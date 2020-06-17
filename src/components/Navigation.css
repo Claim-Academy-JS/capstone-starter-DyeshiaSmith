@@ -1,11 +1,10 @@
 .Navigation {
   background: red;
+  justify-content: space-evenly;
 }
 
 nav ul {
   display: flex;
-}
-
-nav ul {
-  background: red;
+  background: orangered;
+  justify-content: space-evenly;
 }
