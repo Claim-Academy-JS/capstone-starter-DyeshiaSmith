@@ -1,15 +1,23 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
 main {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
   background: #D5CABD;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-block;
 }
 
 input {
-  display: inline;
-  align-items: center;
-  justify-content: space-between;
-  background: blue;
+  margin: 50px;
+}
+
+.button {
+  display: flex;
+  margin: 10rem;
+  background: orange;
 }
