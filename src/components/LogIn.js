@@ -1,4 +1,5 @@
 import React from "react";
+import "./Login.css";
 
 export default class Login extends React.Component {
   // Using ES class fields
@@ -19,7 +20,7 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <div className="main">
+      <main>
         <form className="login-form">
           {/* TODO: Refactor this to use just one Input component */}
           <input
@@ -42,7 +43,7 @@ export default class Login extends React.Component {
             Submit
           </button>
         </form>
-      </div>
+      </main>
     );
   }
 }
