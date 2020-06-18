@@ -1,0 +1,10 @@
+.Navigation {
+  background: #D5CABD;
+  justify-content: space-evenly;
+}
+
+nav ul {
+  display: flex;
+  background: orangered;
+  justify-content: space-evenly;
+}

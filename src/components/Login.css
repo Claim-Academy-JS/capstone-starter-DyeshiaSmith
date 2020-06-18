@@ -1,0 +1,15 @@
+main {
+  background: #D5CABD;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  display: inline;
+  align-items: center;
+  justify-content: space-between;
+  background: blue;
+}
