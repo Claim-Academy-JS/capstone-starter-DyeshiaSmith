@@ -1,4 +1,4 @@
-import { getAllProducts } from "db";
+import getAllProducts from "../../db/index";
 
 import { Router } from "express";
 
@@ -9,7 +9,7 @@ router.get("/test", (_, res) => {
 });
 
 router.get("/products", async (_, res) => {
-  res.json(await getAllProducts());
+  res.send(await getAllProducts());
 });
 
 export default router;
