@@ -1,0 +1,30 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 0;
+}
+
+.main-div {
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+.login-main {
+  width: 60vw;
+  height: 80vh;
+  border: 15px solid green;
+  margin-left: 15vw;
+  background-color: #D5CABD;
+  display: inline-block;
+}
+
+input {
+  margin-top: 10vh;
+  margin-left: 8vw;
+}
+
+button {
+  margin-top: 10vh;
+  margin-left: 26vw;
+  background: orange;
+}

@@ -12,7 +12,7 @@ export default class Navigation extends React.Component {
     return this.links.map((link) => {
       return (
         <li>
-          <a href={kebabcase(link.toLowerCase())}>Equipment</a>
+          <a href={kebabcase(link.toLowerCase())}>{link}</a>
         </li>
       );
     });

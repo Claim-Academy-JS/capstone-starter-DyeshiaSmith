@@ -1,13 +1,8 @@
-import dotenv from "dotenv"
-import { MongoClient } from "mongodb"
+import dotenv from "dotenv";
+import { MongoClient } from "mongodb";
 
-dotenv.config()
+dotenv.config();
 
-export const client = new MongoClient(
-  process.env.ATLAS_URI,
-  // TODO: Figure out what this is and why it's needed to turn off deprecation warning
-  {
-    useUnifiedTopology: true,
-  }
-)
-
+export const client = new MongoClient(process.env.ATLAS_URI, {
+  useUnifiedTopology: true,
+});

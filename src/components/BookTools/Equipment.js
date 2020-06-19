@@ -1,7 +1,14 @@
-// list of tools OUTDOOR ITEMS,HOUSEHOLD, AUTOMOTIVE..
 import React from "react";
+import getAllProducts from "../../api/index";
+
 export default class Equipment extends React.Component {
   render() {
-    return <div>Equipment</div>;
+    return (
+      <div>
+        {getAllProducts().then((data) => (
+          <div>{data}</div>
+        ))}
+      </div>
+    );
   }
 }

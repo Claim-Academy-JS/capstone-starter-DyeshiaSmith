@@ -1,16 +1,15 @@
 import React from "react";
-import Navigation from "./components/Navigation";
-import Login from "./components/Login";
-import Return from "components/Return";
-import { NearMe } from "./components/BookTools/NearMe";
-import { Equipment } from "./components/BookTools/Equipment";
-import "./App.css";
-
+import Login from "./components/Login/Login";
+import Navigation from "./components/HomePage/Navigation";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 export default class App extends React.Component {
   render() {
     return (
-      <main className="./App">
-        <Login />
+      <main className="App">
+        <Router>
+          <Route exact path="/" component={Login} />
+          <Route path="/home" component={Navigation} />
+        </Router>
       </main>
     );
   }
