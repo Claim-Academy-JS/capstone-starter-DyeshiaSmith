@@ -1,0 +1,15 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  max-width: 375px;
+  padding: 1rem;
+}
+
+form {
+  border: solid thin #333;
+}
+
+button {
+  border: none;
+}

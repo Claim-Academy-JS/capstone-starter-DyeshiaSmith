@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Login.css";
 
+import { authenticateUser } from "api";
 export default class Login extends React.Component {
   // Using ES class fields
   state = {
@@ -19,10 +20,11 @@ export default class Login extends React.Component {
   };
 
   render() {
+    //add error handling
     return (
       <div className="main-div">
         <main className="login-main">
-          <form className="login-form">
+          <form className="login-form" onSubmit={this.handleSubmit}>
             {/* TODO: Refactor this to use just one Input component */}
             <input
               type="text"

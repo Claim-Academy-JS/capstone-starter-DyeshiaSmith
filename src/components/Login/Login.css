@@ -10,21 +10,22 @@ body {
 }
 
 .login-main {
+  margin-top: 80px;
   width: 60vw;
-  height: 80vh;
+  height: 60vh;
   border: 15px solid green;
   margin-left: 15vw;
   background-color: #D5CABD;
   display: inline-block;
 }
 
-input {
+.input  {
   margin-top: 10vh;
   margin-left: 8vw;
 }
 
 button {
-  margin-top: 10vh;
+  margin-top: 7vh;
   margin-left: 26vw;
   background: orange;
 }

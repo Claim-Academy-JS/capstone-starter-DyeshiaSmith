@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Login from "./components/Login/Login";
 import Navigation from "./components/HomePage/Navigation";
 import Equipment from "./components/BookTools/Equipment";
@@ -10,7 +10,7 @@ export default class App extends React.Component {
         <Router>
           <Route path="/BookTools" component={Equipment} />
           <Route exact path="/" component={Login} />
-          <Route path="/home" component={Navigation} />
+          <Route path="/equipment" component={Navigation} />
         </Router>
       </main>
     );
