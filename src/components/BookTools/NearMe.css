@@ -1,0 +1,15 @@
+table {
+  border: solid thin black;
+  border-spacing: 0 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+th {
+  text-align: center;
+  text-decoration: solid;
+}
+
+td {
+  border-bottom: solid thin black;
+}
