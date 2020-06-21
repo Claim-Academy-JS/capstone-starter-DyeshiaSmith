@@ -15,6 +15,6 @@ export default class Equipment extends React.Component {
     }
   }
   render() {
-    return <div>{this.state.products}</div>;
+    return <p>hello</p>;
   }
 }

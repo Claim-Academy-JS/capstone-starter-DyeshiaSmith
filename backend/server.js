@@ -3,6 +3,8 @@ import express from "express";
 
 import products from "./routes/api/products";
 
+import { getAllProducts } from "./db";
+
 const app = express();
 const PORT = 5000;
 
@@ -21,3 +23,11 @@ app.use("/api/products", products);
 app.listen(PORT, () => {
   console.info(`run server: http://localhost:${PORT}`);
 });
+
+(async () => {
+  try {
+    console.log(await getAllProducts());
+  } catch (e) {
+    console.error(e);
+  }
+})();

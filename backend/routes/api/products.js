@@ -1,15 +1,15 @@
-import { getAllProducts } from "db";
+import { getAllProducts } from "../../db";
 
 const express = require("express");
 
 const router = express.Router();
 
-router.get("/test", (_, res) => {
+router.get("/beepbop", (_, res) => {
   res.send("<p>Products router testing</p>");
 });
 
-router.get("/products", async (_, res) => {
-  res.send(await getAllProducts());
+router.get("/test", async (_, res) => {
+  res.json(await getAllProducts());
 });
 
 export default router;
