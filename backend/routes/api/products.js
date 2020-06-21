@@ -4,11 +4,9 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/beepbop", (_, res) => {
-  res.send("<p>Products router testing</p>");
-});
+router.get("/test", (_, res) => res.send("<p>Products router testing</p>"));
 
-router.get("/test", async (_, res) => {
+router.get("/products", async (_, res) => {
   res.json(await getAllProducts());
 });
 
