@@ -1,18 +1,35 @@
 //Book Tools- Near Me(the Search)- use api to get location of people who log in from their computer.and the profile of the seller, rate they charge per hour, location...
+import PropTypes from "prop-types";
 import React from "react";
 
+import "NearMe.css";
 
-export default class NearMe extends React.Component {
-  render() {
+const renderTBody = (products) => {
+  return products.map(({ equipment, price, location }, index) => {
     return (
-      <div> className="text-container">
-      <input
-        className="input is-small is- rounded"
-        type="text"
-        placeholder="&#128269;Search"
-        />
-      </div>
-    )
-}
+      <tr key={index}>
+        <td>{equipment}</td>
+        <td>{price}</td>
+        <td>{location}</td>
+      </tr>
+    );
+  });
+};
 
-//todo: add form data
+export const ProductTable = ({ products }) => {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>equipment</th>
+          <th>Price</th>
+          <th>location</th>
+        </tr>
+      </thead>
+      <tbody>{renderTBody(products)}</tbody>
+    </table>
+  );
+};
+ProductTable.propTypes = {
+  products: PropTypes.array,
+};
