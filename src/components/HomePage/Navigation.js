@@ -1,5 +1,5 @@
 import React from "react";
-import kebabcase from "lodash.kebabcase";
+import camelCase from "camelCase";
 
 import "font-awesome/css/font-awesome.min.css";
 
@@ -12,7 +12,7 @@ export default class Navigation extends React.Component {
     return this.links.map((link) => {
       return (
         <li>
-          <a href={kebabcase(link.toLowerCase())}>{link}</a>
+          <a href={camelCase(link.toLowerCase())}>{link}</a>
         </li>
       );
     });
