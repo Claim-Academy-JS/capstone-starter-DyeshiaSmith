@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Login.css";
 import { Button } from "./Button";
 
-import { authenticateUser } from "api";
+//import { authenticateUser } from "api";
 export class Login extends React.Component {
   state = {
     buttonTexts: ["Login", "Register"],
