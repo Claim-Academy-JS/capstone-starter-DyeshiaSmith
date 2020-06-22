@@ -1,0 +1,8 @@
+.hero {
+  align-items: center;
+  background: url("https://unsplash.com/photos/Q5G6rsv373U/800x600") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
