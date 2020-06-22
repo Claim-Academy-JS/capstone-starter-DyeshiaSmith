@@ -8,3 +8,7 @@ nav ul {
   background: orangered;
   justify-content: space-evenly;
 }
+
+.isActiveLink {
+  text-transform: uppercase;
+}

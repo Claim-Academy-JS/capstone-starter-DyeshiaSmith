@@ -1,6 +1,6 @@
 button:not(.plain) {
   border-radius: 0.25rem;
-  color: #fff;
+  color: lavenderblush;
   padding: 0.375rem 0.75rem;
   transition: background-color 0.15s ease-in-out;
 }
@@ -11,7 +11,7 @@ button:not(.plain) {
 }
 
 .primary {
-  background-color: #6200ee;
+  background-color: blue;
 }
 
 .primary:hover {
