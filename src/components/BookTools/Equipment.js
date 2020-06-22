@@ -1,5 +1,5 @@
-import React from "react";
-import { getAllProducts } from "api";
+// import React from "react";
+// import { getAllProducts } from "api";
 
 export default class Equipment extends React.Component {
   state = {
