@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Login.css";
-import { Button } from "./Button";
+import { Button } from "../Button";
 
 //import { authenticateUser } from "api";
 export class Login extends React.Component {

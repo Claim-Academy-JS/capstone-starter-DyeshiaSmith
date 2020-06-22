@@ -1,4 +1,4 @@
-export const getAllProducts = async () => {
+export const getAllProducts = async (endpoint) => {
   const resp = await fetch("http://localhost:5000/api/products/products");
   return resp.json();
 };
@@ -11,8 +11,4 @@ export const authenticateUser = async (authDeets) => {
     },
     body: JSON.stringify(authDeets),
   });
-
-  return;
 };
-
-//formData --  ex: from submission utility data
