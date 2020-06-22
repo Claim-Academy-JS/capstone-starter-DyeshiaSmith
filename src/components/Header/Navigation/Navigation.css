@@ -1,12 +1,12 @@
-.Navigation {
-  background: #D5CABD;
-  justify-content: space-evenly;
-}
-
 nav ul {
   display: flex;
-  background: orangered;
+  background: #D5CABD;
   justify-content: space-evenly;
+  width: 880px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .isActiveLink {
