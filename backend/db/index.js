@@ -10,3 +10,11 @@ export const getAllProducts = async () => {
     throw new Error(err);
   }
 };
+
+export const loginUser = async (User) => {
+  try {
+    return await client.db("equipped").collection("productTest").findOne(User);
+  } catch (err) {
+    throw new Error(err);
+  }
+};
