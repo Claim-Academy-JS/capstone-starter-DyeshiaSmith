@@ -6,10 +6,24 @@ body {
   padding: 1rem;
 }
 
+li {
+  list-style-type: none;
+}
+
 form {
   border: solid thin #333;
 }
 
 button {
   border: none;
+}
+
+button:focus,
+button:hover {
+  outline-color: blue;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
 }

@@ -1,4 +1,4 @@
-export { Login } from "./Login/Login";
-export { Button } from "./Button";
-export { bookTools } from "./Renters/Renters";
-export { Equipment } from "./BookTools/Equipment";
+export { FilterableProductTable } from "./FilterableProductTable";
+export { Header } from "./Header";
+export { Home, About } from "./views";
+export { Login } from "./Forms/Login";
