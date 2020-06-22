@@ -2,7 +2,6 @@ import cors from "cors";
 import express from "express";
 
 import products from "./routes/api/products";
-
 import users from "./routes/api/users";
 
 const app = express();
@@ -27,11 +26,3 @@ app.use("/api/users", users);
 app.listen(PORT, () => {
   console.info(`run server: http://localhost:${PORT}`);
 });
-
-(async () => {
-  try {
-    console.log(await getAllProducts());
-  } catch (e) {
-    console.error(e);
-  }
-})();
