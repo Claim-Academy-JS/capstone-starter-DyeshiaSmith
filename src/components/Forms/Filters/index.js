@@ -1,20 +1,24 @@
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
-import "./Filters.css";
+import { Form } from "../Form";
+
+// 'styles' is not a named export
+import styles from "./Filters.module.css";
 
 export class Filters extends Form {
-  static propTypes= {
+  static propTypes = {
     onChange: PropTypes.func,
   };
 
   inputs = [
     {
-      labelText: "Price Per Hour",
+      labelText: "Price",
       inputType: "number",
     },
     {
       labelText: "Users",
-      inputType:"",
+      inputType: "",
     },
     {
       labelText: "Search",
@@ -33,10 +37,15 @@ export class Filters extends Form {
   handleChange = (event) => {
     this.props.onChange({
       [event.target.dataset.st]:
+        event.target.type === "search"
+          ? event.target.checked
+          : event.target.value,
     });
   };
 
   render() {
-    return <form>{this.renderInputs(this.inputs)}</form>;
+    return (
+      <form className={styles.form}>{this.renderInputs(this.inputs)}</form>
+    );
   }
 }
