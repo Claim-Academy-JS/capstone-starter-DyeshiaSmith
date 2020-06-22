@@ -3,7 +3,7 @@ import express from "express";
 
 import products from "./routes/api/products";
 
-import { getAllProducts } from "./db";
+import users from "./routes/api/users";
 
 const app = express();
 const PORT = 5000;
@@ -19,6 +19,10 @@ app.use(
 );
 
 app.use("/api/products", products);
+
+app.use(express.json());
+
+app.use("/api/users", users);
 
 app.listen(PORT, () => {
   console.info(`run server: http://localhost:${PORT}`);
