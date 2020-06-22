@@ -1,24 +1,21 @@
 .form {
   align-items: center;
+  background-color: #D5CABD;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
-  margin: 5px;
-  max-width: 1px;
-  padding: 0;
-  background-color: aquamarine;
+  margin: 0.5rem auto;
+  padding: 1rem;
 }
 
 .form label {
   position: absolute;
   top: -9999px;
   left: -9999px;
-  margin-top: 80px;
-  margin-left: 15vw;
   background-color: #D5CABD;
 }
 
 .form button {
-  margin-top: 7vh;
-  margin-left: 26vw;
+  margin-top: 1rem;
   background: orange;
 }
