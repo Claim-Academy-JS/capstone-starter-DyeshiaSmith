@@ -18,3 +18,14 @@ export const loginUser = async (User) => {
     throw new Error(err);
   }
 };
+
+export const registerUser = async (newUser) => {
+  try {
+    return await client
+      .db("equipped")
+      .collection("productTest")
+      .insertOne(newUser);
+  } catch (err) {
+    throw new Error(err);
+  }
+};
