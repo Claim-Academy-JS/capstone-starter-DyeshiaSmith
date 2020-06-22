@@ -18,18 +18,18 @@
 
 // export const ProductTable = ({ products }) => {
 //   return (
-    <table>
+//     <table>
 //       <thead>
 //         <tr>
 //           <th>equipment</th>
 //           <th>Price</th>
 //           <th>location</th>
-        </tr>
-      </thead>
-      <tbody>{renderTBody(products)}</tbody>
-    </table>
-  );
-};
-ProductTable.propTypes = {
-  products: PropTypes.array,
-};
+//         </tr>
+//       </thead>
+//       <tbody>{renderTBody(products)}</tbody>
+//     </table>
+//   );
+// };
+// ProductTable.propTypes = {
+//   products: PropTypes.array,
+// };
