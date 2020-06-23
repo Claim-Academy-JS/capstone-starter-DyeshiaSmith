@@ -3,6 +3,12 @@
   border: thin solid purple;
 }
 
+h1 {
+  color: brown;
+  display: flex;
+
+}
+
 .hero {
   align-items: center;
   background-size: auto;

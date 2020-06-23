@@ -6,7 +6,7 @@ import { Login } from "./components";
 
 export const App = () => (
   <Fragment>
-    <Login />
-    <Navigation />
+    {/* <Login /> */}
+    {/* <Navigation /> */}
   </Fragment>
 );

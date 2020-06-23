@@ -3,9 +3,8 @@ import ReactDOM from "react-dom";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { Header } from "components/Header";
+import { Header, Footer } from "./components";
 import { Routes } from "./routes";
-import Footer from "./components/Footer/index";
 
 import "normalize.css";
 import "./index.css";

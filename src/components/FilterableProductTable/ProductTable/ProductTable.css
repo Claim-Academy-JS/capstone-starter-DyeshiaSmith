@@ -1,8 +1,7 @@
 table {
   border: solid thin blue;
   border-spacing: 4rem;
-  padding: 1rem;
-  width: 50rem;
+  margin: 46rem;
 }
 
 th {
