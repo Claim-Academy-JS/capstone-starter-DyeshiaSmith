@@ -2,7 +2,7 @@ import React from "react";
 
 import { ProductTable as Table } from "./ProductTable";
 
-import { Filters } from "../Forms/Filters";
+import { Filters } from "components/Forms/Filters";
 
 import "./FilterableProductTable.css";
 
