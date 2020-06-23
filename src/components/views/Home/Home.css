@@ -1,5 +1,6 @@
-main {
-  background: url("https://unsplash.com/photos/Q5G6rsv373U") no-repeat center center fixed;
+.img {
+  background: url("https://images.unsplash.com/photo-1577952634265-f12b1e976ecf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") no-repeat center center fixed;
+  border: thin solid purple;
 }
 
 .hero {

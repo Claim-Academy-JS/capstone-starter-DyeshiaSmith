@@ -24,7 +24,7 @@ export const ProductTable = ({ products }) => {
     <table>
       <thead>
         <tr>
-          <th>Product Name</th>
+          <th>Equipment</th>
           <th>Price</th>
           <th>Location</th>
         </tr>

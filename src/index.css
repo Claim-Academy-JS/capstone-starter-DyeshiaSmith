@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 li {
@@ -15,15 +18,25 @@ li {
 form,
 table {
   margin: 0 0.5rem;
+  display: flex;
 }
 
 form {
-  border: solid thin #333;
-  padding: 0.5rem;
+  border: solid orange;
+  padding: 9vw 5vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80vh;
 }
 
 table {
+  display: inline;
   padding: 1rem;
+}
+
+th {
+
 }
 
 button {
@@ -39,4 +52,7 @@ button:hover {
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  display: flex;
+  flex-direction: column;
 }
+

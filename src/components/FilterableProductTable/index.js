@@ -2,34 +2,31 @@ import React from "react";
 
 import { ProductTable as Table } from "./ProductTable";
 
-import { makeRequest } from "../../api/index";
-import { parseDollarPrice } from "utils";
-
 import { Filters } from "../Forms/Filters";
 
 import "./FilterableProductTable.css";
 
 export class FilterableProductTable extends React.Component {
-  //may need to filter more and how to filter cbs
   state = {
+    type: [],
     products: [],
     activeProductFilters: [],
   };
 
   filterCBs = {
-    inStockOnly: (_) => ({ stocked }) => stocked,
-    maxPrice: (maxPrice) => ({ price }) =>
-      parseDollarPrice(price) <= parseFloat(maxPrice),
-    search: (search) => ({ name }) =>
-      name.toLowerCase().includes(search.toLowerCase()),
+    household: ({ household }) => household,
+    outdoor: ({ outdoor }) => outdoor,
+    automotive: ({ automotive }) => automotive,
+    searchTerm: (search) => ({ product }) =>
+      product.toLowerCase().includes(search.toLowerCase()),
   };
 
   async componentDidMount() {
+    const res = await fetch("http://localhost:3000/api/products/products");
+
     try {
       this.setState({
-        products: await makeRequest(
-          "http://localhost:5000/api/products/products"
-        ),
+        products: await res.json(),
       });
     } catch (error) {
       console.error(error);
@@ -38,12 +35,19 @@ export class FilterableProductTable extends React.Component {
 
   inputs = [
     {
-      labelTextContent: "Price",
-      inputType: "number",
+      labelTextContent: "Automotive",
+      inputType: "checkbox",
+      valType: "checked",
     },
     {
-      labelTextContent: "BookTool",
-      inputType: "button",
+      labelTextContent: "Household",
+      inputType: "checkbox",
+      valType: "checked",
+    },
+    {
+      labelTextContent: "Outdoor",
+      inputType: "checkbox",
+      valType: "checkbox",
     },
     {
       labelTextContent: "Search",
@@ -88,5 +92,3 @@ export class FilterableProductTable extends React.Component {
     );
   }
 }
-
-// figure out exactly what this will do to my table

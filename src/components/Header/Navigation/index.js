@@ -6,7 +6,7 @@ import "font-awesome/css/font-awesome.min.css";
 
 import "./Navigation.css";
 
-const links = ["Home", "Equipment", "About", "Return"];
+const links = ["Home", "Equipment", "About"];
 
 const createLinks = () => {
   return links.map((link) => {

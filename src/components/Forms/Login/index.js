@@ -46,13 +46,11 @@ export class Login extends Form {
     const newUserData = this.checkIsRegistration()
       ? JSON.stringify({
           ...this.processFormData(e.target),
-          ...{ faves: [] },
         })
       : JSON.stringify(this.processFormData(e.target));
 
-    // TODO: Handle errors
     const res = await fetch(
-      `http://localhost:3001/api/users/user/${endpoint}`,
+      `http://localhost:3000/api/users/user/${endpoint}`,
       {
         method: "POST",
         headers: {
@@ -66,7 +64,6 @@ export class Login extends Form {
   handleButtonToggle = () => {
     const currentInputs = this.state.inputs;
 
-    // 'length' determines whether registrationInputs included or not
     this.setState({
       buttonTexts: [...this.state.buttonTexts].reverse(),
       inputs: this.checkIsRegistration()

@@ -3,7 +3,6 @@ import React from "react";
 
 import { Form } from "../Form";
 
-// 'styles' is not a named export
 import styles from "./Filters.module.css";
 
 export class Filters extends Form {
@@ -14,11 +13,11 @@ export class Filters extends Form {
   inputs = [
     {
       labelText: "Price",
-      inputType: "number",
+      inputType: "",
     },
     {
-      labelText: "Users",
-      inputType: "",
+      labelText: "Products",
+      inputType: "search",
     },
     {
       labelText: "Search",
@@ -30,7 +29,11 @@ export class Filters extends Form {
     },
     {
       labelText: "Type",
-      inputType: "",
+      inputType: "Search",
+    },
+    {
+      labelText: "Submit",
+      inputType: "Submit",
     },
   ];
 

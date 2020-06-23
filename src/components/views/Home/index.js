@@ -5,8 +5,9 @@ import { Login } from "components/Forms/Login";
 import "./Home.css";
 
 export const Home = () => (
-  <main>
+  <main className="img">
     <h1>Home</h1>
+
     <div className="hero">
       <Login />
     </div>

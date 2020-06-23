@@ -1,6 +1,6 @@
 import React from "react";
 
-export class equipment extends React.Component {
+export class Equipment extends React.Component {
   state = {
     products: [],
   };
@@ -9,7 +9,7 @@ export class equipment extends React.Component {
     const res = await fetch("http://localhost:5000/api/products/products");
     try {
       this.setState({
-        posts: await res.json(),
+        products: await res.json(),
       });
     } catch (error) {
       console.error(error);

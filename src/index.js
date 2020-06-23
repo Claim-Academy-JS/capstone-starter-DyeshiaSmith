@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import { Header } from "components/Header";
 import { Routes } from "./routes";
+import Footer from "./components/Footer/index";
 
 import "normalize.css";
 import "./index.css";
@@ -15,6 +16,7 @@ ReactDOM.render(
       <div className="container">
         <Header />
         <Routes />
+        <Footer />
       </div>
     </Router>
   </React.StrictMode>,
