@@ -85,9 +85,9 @@ export class FilterableProductTable extends React.Component {
     );
 
     return (
-      <main className="main">
-        <Filters onChange={this.handleChange} />
+      <main className="filterInputs">
         <Table products={filteredProducts} />
+        <Filters onChange={this.handleChange} />
       </main>
     );
   }
