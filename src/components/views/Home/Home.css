@@ -5,8 +5,8 @@
 
 .hero {
   align-items: center;
-  background-size: cover;
+  background-size: auto;
   display: flex;
-  height: 300px;
+  height: 400px;
   justify-content: center;
 }
