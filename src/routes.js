@@ -1,8 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { About } from "./components";
-import { FilterableProductTable as Equipment } from "./components/FilterableProductTable";
-import { Home } from "./components";
+import { Home, Equipment, About } from "./components";
 
 export const Routes = () => (
   <Switch>
