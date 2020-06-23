@@ -12,28 +12,24 @@ export class Filters extends Form {
 
   inputs = [
     {
-      labelText: "Price",
-      inputType: "",
-    },
-    {
-      labelText: "Products",
+      labelText: "Equipment",
       inputType: "search",
     },
     {
-      labelText: "Search",
-      inputType: "Search",
-    },
-    {
       labelText: "Location",
-      inputType: "",
-    },
-    {
-      labelText: "Type",
       inputType: "Search",
     },
     {
-      labelText: "Submit",
-      inputType: "Submit",
+      labelText: "Indoor",
+      inputType: "Radio",
+    },
+    {
+      labelText: "Outdoor",
+      inputType: "Radio",
+    },
+    {
+      labelText: "Automotive",
+      inputType: "Radio",
     },
   ];
 

@@ -2,24 +2,21 @@ import React from "react";
 
 import { ProductTable as Table } from "./ProductTable";
 
+import { parseDollarPrice } from "utils";
+
 import { Filters } from "components/Forms/Filters";
 
 import "./FilterableProductTable.css";
 
 export class FilterableProductTable extends React.Component {
   state = {
-    type: [],
     products: [],
     activeProductFilters: [],
   };
 
-  filterCBs = {
-    household: ({ household }) => household,
-    outdoor: ({ outdoor }) => outdoor,
-    automotive: ({ automotive }) => automotive,
-    searchTerm: (search) => ({ product }) =>
-      product.toLowerCase().includes(search.toLowerCase()),
-  };
+  //search by products and type
+  //filter cbs
+  //be able to filter by "Type" using radio buttons'
 
   async componentDidMount() {
     const res = await fetch("http://localhost:5000/api/products/products");
@@ -35,22 +32,12 @@ export class FilterableProductTable extends React.Component {
 
   inputs = [
     {
-      labelTextContent: "Automotive",
+      labelTextContent: "Type",
       inputType: "checkbox",
       valType: "checked",
     },
     {
-      labelTextContent: "Household",
-      inputType: "checkbox",
-      valType: "checked",
-    },
-    {
-      labelTextContent: "Outdoor",
-      inputType: "checkbox",
-      valType: "checkbox",
-    },
-    {
-      labelTextContent: "Search",
+      labelTextContent: "Equipment",
       inputType: "search",
     },
   ];
@@ -86,8 +73,8 @@ export class FilterableProductTable extends React.Component {
 
     return (
       <main className="filterInputs">
-        <Table products={filteredProducts} />
         <Filters onChange={this.handleChange} />
+        <Table products={filteredProducts} />
       </main>
     );
   }

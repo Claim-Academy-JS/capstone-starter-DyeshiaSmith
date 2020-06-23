@@ -6,13 +6,14 @@ import { ProductRow } from "./ProductRow";
 import "./ProductTable.css";
 
 const renderTBody = (products) => {
-  return products.map(({ _id: id, name, price, location }) => {
+  return products.map(({ _id: id, users, price, location, equipment }) => {
     return (
       <ProductRow
         id={id}
-        name={name}
+        users={users}
         price={price}
         location={location}
+        equipment={equipment}
         key={id}
       />
     );
@@ -27,6 +28,9 @@ export const ProductTable = ({ products }) => {
           <th>Equipment</th>
           <th>Price</th>
           <th>Location</th>
+          <th>
+            <span role="img" aria-label="green heart"></span> Select
+          </th>
         </tr>
       </thead>
       <tbody>{renderTBody(products)}</tbody>

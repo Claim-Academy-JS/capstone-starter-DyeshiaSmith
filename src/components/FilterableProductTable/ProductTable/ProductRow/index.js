@@ -1,16 +1,18 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import { FaveDeets } from "./FaveDeets";
+
 export class ProductRow extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    equipment: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
-    // location: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
   };
 
-  handleClick = async (book) => {
-    const endpoint = book ? "add" : "remove";
+  handleClick = async (isFaved) => {
+    const endpoint = isFaved ? "add" : "remove";
 
     const results = await fetch(
       `http://localhost:3000/api/users/user/faves/${endpoint}`,
@@ -21,6 +23,7 @@ export class ProductRow extends React.Component {
         },
         body: JSON.stringify({
           query: { username: "dye" },
+          fave: this.props.id,
         }),
       }
     );
@@ -30,14 +33,14 @@ export class ProductRow extends React.Component {
 
   render() {
     return (
-      <table>
-        <tr>
-          <td>{this.props.name}</td>
-          <td>{this.props.price}</td>
-          {/* <td {this.props.location}</td> */}
-          <submit onClick={this.handleClick} />
-        </tr>
-      </table>
+      <tr>
+        <td>{this.props.equipment}</td>
+        <td>{this.props.price}</td>
+        <td>{this.props.location}</td>
+        <td className="fave">
+          <FaveDeets onClick={this.handleClick} />
+        </td>
+      </tr>
     );
   }
 }
