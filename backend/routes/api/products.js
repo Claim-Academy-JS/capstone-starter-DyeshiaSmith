@@ -1,4 +1,4 @@
-import { getAllProducts } from "../../db";
+import { getAllProducts } from "db";
 
 const express = require("express");
 
