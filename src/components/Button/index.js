@@ -8,11 +8,13 @@ export const Button = ({ buttonClass, buttonText, onClick, type }) => (
     {buttonText}
   </button>
 );
+
 Button.defaultProps = {
   buttonClass: "success",
   buttonText: "Submit",
   type: "submit",
 };
+
 Button.propTypes = {
   buttonClass: PropTypes.string,
   buttonText: PropTypes.string,
