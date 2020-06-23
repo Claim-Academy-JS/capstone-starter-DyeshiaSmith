@@ -8,7 +8,7 @@ export const client = new MongoClient(process.env.ATLAS_URI, {
 });
 
 (async () => {
-  await client.connect;
+  await client.connect();
 
   process.on("SIGINT", () => {
     client.close().then(() => {
