@@ -22,7 +22,7 @@ export class FilterableProductTable extends React.Component {
   };
 
   async componentDidMount() {
-    const res = await fetch("http://localhost:3000/api/products/products");
+    const res = await fetch("http://localhost:5000/api/products/products");
 
     try {
       this.setState({
