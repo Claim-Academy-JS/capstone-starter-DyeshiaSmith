@@ -19,6 +19,10 @@ li {
   list-style-type: none;
 }
 
+input {
+  border-radius: 3px;
+}
+
 button {
   border-color: #318eab;
 }

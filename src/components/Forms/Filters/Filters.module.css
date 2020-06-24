@@ -1,8 +1,5 @@
-form {
+.filters {
   display: flex;
   margin-top: 0.5rem;
 }
 
-input {
-  border-radius: 3px;
-}
