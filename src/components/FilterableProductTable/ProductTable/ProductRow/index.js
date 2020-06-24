@@ -22,7 +22,7 @@ export class ProductRow extends React.Component {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          query: { username: "dye" },
+          query: { username: "username" },
           fave: this.props.id,
         }),
       }

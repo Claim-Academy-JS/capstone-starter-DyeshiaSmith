@@ -13,7 +13,7 @@ export const getAllProducts = async () => {
 
 export const loginUser = async (User) => {
   try {
-    return await client.db("equipped").collection("productTest").findOne(User);
+    return await client.db("equipped").collection("auth").findOne(User);
   } catch (err) {
     throw new Error(err);
   }

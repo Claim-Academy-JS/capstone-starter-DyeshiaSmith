@@ -4,9 +4,11 @@ import { Button } from "components/Button";
 import { Form } from "../Form";
 
 import styles from "./Login.module.css";
-
 export class Login extends Form {
   state = {
+    success: false,
+    error: false,
+
     buttonTexts: ["Login", "Register"],
     inputs: [
       {
@@ -49,16 +51,18 @@ export class Login extends Form {
         })
       : JSON.stringify(this.processFormData(e.target));
 
-    const res = await fetch(
-      `http://localhost:3000/api/users/user/${endpoint}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: newUserData,
+    const res = await fetch(`http://localhost:5000/api/users/user${endpoint}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: newUserData,
+    }).then((response) => {
+      console.log(response);
+      if (response.statusText !== "true") {
+        this.setState({ error: "invalid username or password" });
       }
-    );
+    });
   };
 
   handleButtonToggle = () => {

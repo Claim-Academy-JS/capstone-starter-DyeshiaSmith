@@ -35,7 +35,7 @@ export const ProductTable = ({ products }) => {
         <tr>
           <th>Equipment</th>
           <th>Price</th>
-          <th>Location</th>
+          <th>Type</th>
           <th>Rent</th>
         </tr>
       </thead>
