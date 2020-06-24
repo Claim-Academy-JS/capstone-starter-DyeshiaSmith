@@ -14,6 +14,10 @@ export class FilterableProductTable extends React.Component {
     activeProductFilters: [],
   };
 
+  filterCBs = {
+    equipment: (search) => ({ equipment }) =>
+      equipment.toLowerCase().includes(search.toLowerCase()),
+  };
   //search by products and type
   //filter cbs
   //be able to filter by "Type" using radio buttons'
@@ -38,11 +42,12 @@ export class FilterableProductTable extends React.Component {
     },
     {
       labelTextContent: "Equipment",
-      inputType: "search",
+      inputType: "Search",
     },
   ];
 
   handleChange = (filterUpdate) => {
+    console.log(filterUpdate);
     const keyToRemove = Object.keys(filterUpdate)[0];
 
     const productFilters = this.state.activeProductFilters.filter(

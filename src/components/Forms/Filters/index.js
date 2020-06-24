@@ -17,7 +17,7 @@ export class Filters extends Form {
     },
     {
       labelText: "Location",
-      inputType: "Search",
+      inputType: "search",
     },
     {
       labelText: "Indoor",
@@ -36,9 +36,9 @@ export class Filters extends Form {
   handleChange = (event) => {
     this.props.onChange({
       [event.target.dataset.st]:
-        event.target.type === "search"
-          ? event.target.checked
-          : event.target.value,
+        event.target.type.toLowerCase() === "search"
+          ? event.target.value
+          : event.target.checked,
     });
   };
 

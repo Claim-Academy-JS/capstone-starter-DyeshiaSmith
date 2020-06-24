@@ -6,9 +6,9 @@ export class Form extends React.Component {
   handleChange = (event) => {
     this.setState({
       [event.target.dataset.st]:
-        event.target.type === "search"
-          ? event.target.checked
-          : event.target.value,
+        event.target.type === "Search"
+          ? event.target.value
+          : event.target.checked,
     });
   };
 
