@@ -1,16 +1,16 @@
 nav ul {
   display: flex;
-  background-color: #BEA6A0;
+  background-color: #bea6a0;
   justify-content: space-evenly;
   width: 78vw;
   height: 12vh;
 }
 
 a {
+  color: #005b93;
   text-decoration: none;
   display: block;
   padding: 30px;
-  color: #005B93;
 }
 
 a {
