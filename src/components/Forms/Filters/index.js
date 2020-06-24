@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { Form } from "../Form";
+import { Form } from "components/Forms/Form";
+import { Input } from "components/Forms/Input";
 
 import styles from "./Filters.module.css";
 
@@ -11,10 +12,6 @@ export class Filters extends Form {
   };
 
   inputs = [
-    {
-      labelText: "Equipment",
-      inputType: "search",
-    },
     {
       labelText: "Indoor",
       inputType: "radio",
@@ -29,18 +26,22 @@ export class Filters extends Form {
     },
   ];
 
-  handleChange = (event) => {
-    this.props.onChange({
-      [event.target.dataset.st]:
-        event.target.type.toLowerCase() === "search"
-          ? event.target.value
-          : event.target.checked,
-    });
-  };
+  renderInputs = (inputs) =>
+    inputs.map(({ labelText, inputType }) => (
+      <Input
+        label={labelText}
+        type={inputType}
+        key={labelText}
+        onChange={this.handleChange}
+      />
+    ));
 
   render() {
     return (
-      <form className={styles.form}>{this.renderInputs(this.inputs)}</form>
+      <form className={styles.filters}>
+        <Input label="Equipment" type="search" />
+        {this.renderInputs(this.inputs)}
+      </form>
     );
   }
 }
