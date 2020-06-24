@@ -18,41 +18,8 @@ li {
   list-style-type: none;
 }
 
-form,
-table {
-  padding: 0.8rem;
-  border: solid #318EAB;
-  margin: 22px 44.5rem;
-}
-
-table {
-  display: inline;
-  padding: 0.6rem;
-  margin: 46rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 45vw;
-  margin-top: 10px;
-}
-
-th {
-  border: solid black;
-}
-
-/* tr {
-  figure out where table rows are
-  border: solid black;
-} */
-
-tbody td {
-  border-bottom: solid black;
-}
-
 button {
-  border-color: #318EAB;
+  border-color: #318eab;
 }
 
 button:focus,
