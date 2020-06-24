@@ -16,9 +16,6 @@ export class Filters extends Form {
       inputType: "search",
     },
     {
-      labelText: "Location",
-      inputType: "search",
-    },
     {
       labelText: "Indoor",
       inputType: "Radio",

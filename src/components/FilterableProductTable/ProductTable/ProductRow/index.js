@@ -7,8 +7,8 @@ export class ProductRow extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     equipment: PropTypes.string.isRequired,
+    equipmentType: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
   };
 
   handleClick = async (isFaved) => {
