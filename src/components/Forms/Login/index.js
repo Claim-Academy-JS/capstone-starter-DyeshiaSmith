@@ -1,8 +1,6 @@
 import React from "react";
-
 import { Button } from "components/Button";
 import { Form } from "../Form";
-
 import styles from "./Login.module.css";
 export class Login extends Form {
   state = {
@@ -58,9 +56,10 @@ export class Login extends Form {
       },
       body: newUserData,
     }).then((response) => {
-      console.log(response);
-      if (response.statusText !== "true") {
+      if (response.status === 401) {
         this.setState({ error: "invalid username or password" });
+      } else {
+        window.location.href = "/equipment";
       }
     });
   };
@@ -79,6 +78,7 @@ export class Login extends Form {
   render() {
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
+        {this.state.error}
         {this.renderInputs(this.state.inputs)}
         <Button buttonText={this.state.buttonTexts[0]} />
         <Button

@@ -12,12 +12,11 @@ router.post("/user/register", async ({ body }, res) =>
 router.post("/user/login", async ({ body }, res) => {
   const results = await loginUser(body);
   if (results === null) {
-    res.statusText = "invalid username or password";
-    res.send();
+    res.statusCode = 401;
   } else {
-    res.statusText = "true";
+    res.statusCode = 200;
   }
-  res.send({ body: "success" });
+  res.send();
 });
 
 export default router;
