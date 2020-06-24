@@ -2,8 +2,6 @@ import React from "react";
 
 import { ProductTable as Table } from "./ProductTable";
 
-import { parseDollarPrice } from "utils";
-
 import { Filters } from "components/Forms/Filters";
 
 import "./FilterableProductTable.css";
@@ -34,18 +32,6 @@ export class FilterableProductTable extends React.Component {
       console.error(error);
     }
   }
-
-  inputs = [
-    {
-      labelTextContent: "Type",
-      inputType: "checkbox",
-      valType: "checked",
-    },
-    {
-      labelTextContent: "Equipment",
-      inputType: "Search",
-    },
-  ];
 
   handleChange = (filterUpdate) => {
     console.log(filterUpdate);
@@ -78,7 +64,7 @@ export class FilterableProductTable extends React.Component {
     );
 
     return (
-      <main className="filterInputs">
+      <main>
         <Filters onChange={this.handleChange} />
         <Table products={filteredProducts} />
       </main>
