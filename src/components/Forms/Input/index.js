@@ -7,11 +7,13 @@ import "./Input.css";
 
 export class Input extends React.Component {
   static defaultProps = {
+    hideLabel: true,
     type: "text",
     value: "value",
   };
 
   static propTypes = {
+    hideLabel: PropTypes.bool,
     label: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     st: PropTypes.string,
@@ -20,10 +22,14 @@ export class Input extends React.Component {
 
   camelCaseLabel = camelCase(this.props.label);
 
+  className = this.props.hideLabel ? "hiddenLabel" : "label";
+
   render() {
     return (
       <div>
-        <label htmlFor={this.camelCaseLabel}>{this.props.label}</label>
+        <label htmlFor={this.camelCaseLabel} className={this.className}>
+          {this.props.label}
+        </label>
         <input
           id={this.camelCaseLabel}
           type={this.props.type}

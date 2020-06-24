@@ -13,22 +13,26 @@ export class Filters extends Form {
 
   inputs = [
     {
+      hideLabel: false,
       labelText: "Indoor",
       inputType: "radio",
     },
     {
+      hideLabel: false,
       labelText: "Outdoor",
       inputType: "radio",
     },
     {
+      hideLabel: false,
       labelText: "Automotive",
       inputType: "radio",
     },
   ];
 
   renderInputs = (inputs) =>
-    inputs.map(({ labelText, inputType }) => (
+    inputs.map(({ hideLabel, labelText, inputType }) => (
       <Input
+        hideLabel={hideLabel}
         label={labelText}
         type={inputType}
         key={labelText}
