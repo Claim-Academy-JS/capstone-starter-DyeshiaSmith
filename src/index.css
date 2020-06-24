@@ -2,8 +2,8 @@ body {
   font-family: 'Rubik', sans-serif;
   background: url("https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?ixlib=rb-1.2.1&auto=format&fit=crop&w=2050&q=80") no-repeat center center fixed;
   margin: 0 auto;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  /* -moz-osx-font-smoothing: grayscale; */
   font-size: 19px;
   flex-direction: column;
   align-items: center;
