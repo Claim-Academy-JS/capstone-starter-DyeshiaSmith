@@ -3,7 +3,7 @@ import React from "react";
 
 import camelCase from "camelcase";
 
-import "./input.css";
+import "./Input.css";
 
 export class Input extends React.Component {
   static defaultProps = {
