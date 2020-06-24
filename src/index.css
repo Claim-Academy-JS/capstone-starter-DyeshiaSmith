@@ -10,6 +10,12 @@ body {
   align-items: center;
 }
 
+a {
+  color:#1E549B;
+  font-size: larger;
+  font-weight: bold;
+}
+
 ul {
   margin: 0;
   padding: 0;
