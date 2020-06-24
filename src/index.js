@@ -7,6 +7,7 @@ import { Header, Footer } from "./components";
 import { Routes } from "./Routes";
 
 import "normalize.css";
+import "font-awesome/css/font-awesome.min.css";
 import "./index.css";
 
 ReactDOM.render(
@@ -15,7 +16,7 @@ ReactDOM.render(
       <div className="container">
         <Header />
         <Routes />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   </React.StrictMode>,

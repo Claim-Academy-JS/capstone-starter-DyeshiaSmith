@@ -1,14 +1,24 @@
 nav ul {
   display: flex;
-  background: #D5CABD;
+  background-color: #BEA6A0;
   justify-content: space-evenly;
-  width: 990px;
+  width: 78vw;
+  height: 12vh;
 }
 
 a {
   text-decoration: none;
+  display: block;
+  padding: 30px;
+  color: #005B93;
 }
 
-.isActiveLink {
-  text-transform: uppercase;
+a {
+  display: block;
+  padding: 30px;
 }
+
+.isActiveLink:hover {
+  color: #005B93;
+}
+

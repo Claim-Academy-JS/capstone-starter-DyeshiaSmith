@@ -1,11 +1,4 @@
-.pic {
-  background: url("https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80") no-repeat center center fixed;
-}
 
-.hero {
-  align-items: center;
-  background-size: auto;
-  display: flex;
-  height: 400px;
-  justify-content: center;
+table {
+  background: yellow;
 }

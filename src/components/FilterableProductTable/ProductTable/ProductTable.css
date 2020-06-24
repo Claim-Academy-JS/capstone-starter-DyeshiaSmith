@@ -1,7 +1,9 @@
-/* table {
-  border: solid thin blue;
-  border-spacing: 4rem;
-  margin: 46rem;
+table {
+  border-collapse: separate;
+  border: solid thin #005B93;
+  border-spacing: 0 0.5rem;
+  padding: 0.5rem;
+  width: 30rem;
 }
 
 th {
@@ -10,9 +12,9 @@ th {
 }
 
 tbody td {
-  border-bottom: solid thin #333;
+  border-bottom: solid thin #005B93;
 }
 
 .fave {
   text-align: center;
-} */
+}

@@ -11,7 +11,7 @@ export const Button = ({ buttonClass, buttonText, onClick, type }) => (
 
 Button.defaultProps = {
   buttonClass: "success",
-  buttonText: "Submit",
+  buttonText: "Select",
   type: "submit",
 };
 

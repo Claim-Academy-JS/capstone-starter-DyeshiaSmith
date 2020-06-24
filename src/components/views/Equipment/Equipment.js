@@ -5,7 +5,7 @@ import { FilterableProductTable as ProductTable } from "components/FilterablePro
 export class Equipment extends React.Component {
   render() {
     return (
-      <main>
+      <main className="table">
         <ProductTable />
       </main>
     );

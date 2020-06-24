@@ -18,7 +18,8 @@ export class FilterableProductTable extends React.Component {
     equipment: (search) => ({ equipment }) =>
       equipment.toLowerCase().includes(search.toLowerCase()),
   };
-  //search by products and type
+  //search by indoor, Outdoor, Automotive
+  //location
   //filter cbs
   //be able to filter by "Type" using radio buttons'
 
