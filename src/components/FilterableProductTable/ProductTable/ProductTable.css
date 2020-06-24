@@ -11,7 +11,11 @@ th {
   text-decoration: underline;
 }
 
-tbody td {
+th:last-child {
+  text-align: center;
+}
+
+td {
   border-bottom: solid thin #005B93;
 }
 

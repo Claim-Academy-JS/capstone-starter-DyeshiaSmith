@@ -36,9 +36,7 @@ export const ProductTable = ({ products }) => {
           <th>Equipment</th>
           <th>Price</th>
           <th>Location</th>
-          <th>
-            <span role="img" aria-label="green heart"></span> Select
-          </th>
+          <th>Rent</th>
         </tr>
       </thead>
       <tbody>{renderTBody(products)}</tbody>
