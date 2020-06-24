@@ -16,17 +16,16 @@ export class Filters extends Form {
       inputType: "search",
     },
     {
-    {
       labelText: "Indoor",
-      inputType: "Radio",
+      inputType: "radio",
     },
     {
       labelText: "Outdoor",
-      inputType: "Radio",
+      inputType: "radio",
     },
     {
       labelText: "Automotive",
-      inputType: "Radio",
+      inputType: "radio",
     },
   ];
 
