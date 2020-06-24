@@ -1,4 +1,7 @@
 .filters {
+  width: 22rem;
+}
+
   display: flex;
   margin-top: 0.5rem;
 }
