@@ -40,7 +40,7 @@ export class Filters extends Form {
     return (
       <form className={styles.filters}>
         <Input label="Equipment" type="search" />
-        {this.renderInputs(this.inputs)}
+        <div className={styles.container}>{this.renderInputs(this.inputs)}</div>
       </form>
     );
   }

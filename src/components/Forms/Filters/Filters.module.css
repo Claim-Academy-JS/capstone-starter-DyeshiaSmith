@@ -2,7 +2,7 @@
   width: 22rem;
 }
 
+.container {
   display: flex;
-  margin-top: 0.5rem;
+  justify-content: space-between;
 }
-
