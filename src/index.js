@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { Header, Footer } from "./components";
+import { Header } from "./components";
 import { Routes } from "./Routes";
 
 import "normalize.css";
@@ -16,7 +16,6 @@ ReactDOM.render(
       <div className="container">
         <Header />
         <Routes />
-        <Footer />
       </div>
     </Router>
   </React.StrictMode>,
