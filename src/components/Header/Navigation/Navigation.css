@@ -1,9 +1,13 @@
+nav {
+  border: 3px;
+}
+
 nav ul {
   display: flex;
   background-color: #bea6a0;
   justify-content: space-evenly;
-  width: 78vw;
-  height: 12vh;
+  padding: 1rem;
+  width: 90rem;
 }
 
 a {
