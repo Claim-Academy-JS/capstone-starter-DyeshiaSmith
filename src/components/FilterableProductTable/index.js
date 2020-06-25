@@ -31,14 +31,14 @@ export class FilterableProductTable extends React.Component {
     if (event.target.type === "search") {
       activeProductFilters[0] = event.target.value;
     } else {
-      activeProductFilters[1] = event.target.value;
+      activeProductFilters[1] = event.target.dataset.st;
     }
 
     this.setState({ activeProductFilters });
   };
 
   render() {
-    const [searchTerm, type] = this.state.activeProductFilters;
+    const [searchTerm, equipmentType] = this.state.activeProductFilters;
 
     let filteredProducts = this.state.products;
 
@@ -48,9 +48,9 @@ export class FilterableProductTable extends React.Component {
       );
     }
 
-    if (type) {
+    if (equipmentType) {
       filteredProducts = filteredProducts.filter(
-        ({ equipmentType }) => equipmentType === type
+        ({ type }) => type.toLowerCase() === equipmentType
       );
     }
 

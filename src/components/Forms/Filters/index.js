@@ -37,7 +37,7 @@ export class Filters extends Form {
         type={inputType}
         name="equipmentType"
         key={labelText}
-        onChange={this.handleChange}
+        onChange={this.props.onChange}
       />
     ));
 
