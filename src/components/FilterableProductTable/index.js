@@ -8,18 +8,11 @@ import "./FilterableProductTable.css";
 
 export class FilterableProductTable extends React.Component {
   state = {
-    products: [],
+    // Index 0 - search term
+    // Index 1 - 🔘
     activeProductFilters: [],
+    products: [],
   };
-
-  filterCBs = {
-    equipment: (search) => ({ equipment }) =>
-      equipment.toLowerCase().includes(search.toLowerCase()),
-  };
-  //search by indoor, Outdoor, Automotive
-  //location
-  //filter cbs
-  //be able to filter by "Type" using radio buttons'
 
   async componentDidMount() {
     const res = await fetch("http://localhost:5000/api/products/products");
@@ -33,35 +26,33 @@ export class FilterableProductTable extends React.Component {
     }
   }
 
-  handleChange = (filterUpdate) => {
-    console.log(filterUpdate);
-    const keyToRemove = Object.keys(filterUpdate)[0];
-
-    const productFilters = this.state.activeProductFilters.filter(
-      (productFilter) => !(Object.keys(productFilter)[0] === keyToRemove)
-    );
-
-    productFilters.push(filterUpdate);
-
-    const activeProductFilters = productFilters.filter((productFilter) => {
-      console.log(Object.values(productFilter)[0]);
-      return Object.values(productFilter)[0];
-    });
+  handleChange = (event) => {
+    const activeProductFilters = [];
+    if (event.target.type === "search") {
+      activeProductFilters[0] = event.target.value;
+    } else {
+      activeProductFilters[1] = event.target.value;
+    }
 
     this.setState({ activeProductFilters });
   };
 
   render() {
-    const filteredProducts = this.state.activeProductFilters.reduce(
-      (accumulatedProducts, productFilter) => {
-        return accumulatedProducts.filter(
-          this.filterCBs[Object.keys(productFilter)[0]](
-            Object.values(productFilter)[0]
-          )
-        );
-      },
-      this.state.products
-    );
+    const [searchTerm, type] = this.state.activeProductFilters;
+
+    let filteredProducts = this.state.products;
+
+    if (searchTerm) {
+      filteredProducts = filteredProducts.filter(({ equipment }) =>
+        equipment.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    if (type) {
+      filteredProducts = filteredProducts.filter(
+        ({ equipmentType }) => equipmentType === type
+      );
+    }
 
     return (
       <main>

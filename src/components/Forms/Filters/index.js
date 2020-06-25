@@ -43,7 +43,7 @@ export class Filters extends Form {
   render() {
     return (
       <form className={styles.filters}>
-        <Input label="Equipment" type="search" />
+        <Input label="Equipment" type="search" onChange={this.props.onChange} />
         <div className={styles.container}>{this.renderInputs(this.inputs)}</div>
       </form>
     );
