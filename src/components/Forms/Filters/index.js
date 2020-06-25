@@ -35,6 +35,7 @@ export class Filters extends Form {
         hideLabel={hideLabel}
         label={labelText}
         type={inputType}
+        name="equipmentType"
         key={labelText}
         onChange={this.handleChange}
       />
