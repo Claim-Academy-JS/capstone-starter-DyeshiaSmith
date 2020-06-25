@@ -9,16 +9,4 @@ nav ul {
 a {
   color: #005b93;
   text-decoration: none;
-  display: block;
-  padding: 30px;
 }
-
-a {
-  display: block;
-  padding: 30px;
-}
-
-.isActiveLink:hover {
-  color: #005B93;
-}
-
