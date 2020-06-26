@@ -1,0 +1,9 @@
+header {
+  align-items: center;
+  color: #318eab;
+  display: flex;
+}
+
+.container {
+  justify-content: center;
+}

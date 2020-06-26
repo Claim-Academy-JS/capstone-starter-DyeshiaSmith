@@ -1,0 +1,8 @@
+.filters {
+  width: 22rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}

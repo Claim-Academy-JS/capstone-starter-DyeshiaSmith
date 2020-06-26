@@ -1,0 +1,16 @@
+nav {
+  border: 3px;
+}
+
+nav ul {
+  display: flex;
+  background-color: #bea6a0;
+  justify-content: space-evenly;
+  padding: 1rem;
+  width: 90rem;
+}
+
+a {
+  color: #005b93;
+  text-decoration: none;
+}
